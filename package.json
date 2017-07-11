@@ -1,7 +1,7 @@
 {
-  "name": "react-native-image-tools",
+  "name": "@2hats/react-native-image-tools",
   "version": "1.0.0",
-  "description": "",
+  "description": "Install instructions [here](./docs/install.md).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,16 @@
     "react-native"
   ],
   "author": "",
-  "license": ""
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jp928/react-native-image-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jp928/react-native-image-tools/issues"
+  },
+  "homepage": "https://github.com/jp928/react-native-image-tools#readme"
 }
