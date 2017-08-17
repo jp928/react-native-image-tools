@@ -228,3 +228,5 @@ fastlane/test_output
 iOSInjectionProject/
 
 *.xcworkspace/*
+
+package-lock.json

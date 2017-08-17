@@ -16,7 +16,7 @@ public class RNImageToolsPackage implements ReactPackage {
         return Arrays.<NativeModule>asList(new RNImageToolsModule(reactContext));
     }
 
-    @Override
+    // deprecated from RN 0.47
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
