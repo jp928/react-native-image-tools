@@ -44,7 +44,7 @@ dependencies {
     //https://github.com/CreativeSDK/android-getting-started-samples/blob/master/image-editor-ui/code/app/build.gradle
     compile 'com.adobe.creativesdk.foundation:auth:0.9.1251'
     compile 'com.adobe.creativesdk:image:4.8.4'
-    compile 'com.localytics.android:library:4.0.1'
+    compile 'com.localytics.android:library:4.5.1'
 
     compile 'com.facebook.react:react-native:+'
 }
