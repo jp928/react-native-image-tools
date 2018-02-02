@@ -10,7 +10,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.adobe.creativesdk.aviary.AdobeImageIntent;
@@ -234,6 +233,7 @@ public class RNImageToolsModule extends ReactContextBaseJavaModule {
 
     @NonNull
     private WritableNativeMap imageData(Uri uri) {
+        if(uri != null) {
         WritableNativeMap response = new WritableNativeMap();
 
         String[] projection = {
@@ -306,6 +306,9 @@ public class RNImageToolsModule extends ReactContextBaseJavaModule {
                 cursor.close();
         }
         return response;
+        }
+
+        return null;
     }
 
     private abstract class BaseListener extends BaseActivityEventListener {
@@ -342,10 +345,8 @@ public class RNImageToolsModule extends ReactContextBaseJavaModule {
             }
         }
 
-        void resolve(@Nullable Uri uri) {
-            if(uri == null) {
-                callback.resolve(null);
-            } else {
+        void resolve(Uri uri) {
+            if(uri != null) {
                 String realPathFromURI = uri.toString();
                 if (callback != null) {
                     callback.resolve(realPathFromURI);
@@ -379,7 +380,9 @@ public class RNImageToolsModule extends ReactContextBaseJavaModule {
         @Override
         void resolve(Uri uri) {
             WritableNativeMap response = imageData(uri);
-            response.putString("uri", uri.toString());
+            if(uri != null) {
+                response.putString("uri", uri.toString());
+            }
 
             if (callback != null) {
                 callback.resolve(response);
