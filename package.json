@@ -1,6 +1,6 @@
 {
   "name": "@jp928/react-native-image-tools",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Install instructions [here](./docs/install.md).",
   "main": "index.js",
   "scripts": {
